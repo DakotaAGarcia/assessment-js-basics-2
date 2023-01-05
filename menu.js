@@ -50,7 +50,7 @@ const pizza = {
 */
 
 //CODE HERE
-// console.log(pizza.popularity)
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -95,45 +95,45 @@ console.log(`${category}`)
 
 //CODE HERE
 const foodArr=[
-    {   name: 'coders special',
-        price: 10,
-        category: 'entree',
-        popularity: 8,
+    {   name: 'bread sticks',
+        price: 8,
+        category: 'appetizer',
+        popularity: 7,
         rating: 4.5,
-        tags: ['Bug free', 'Fast Delivery', 'Extra cheesy']
+        tags: ['bread', 'Fast Delivery', '']
        
-    }, pizza = {
-        name: 'coders special',
+    }, 
+    { name: 'garlic knots',
         price: 10,
-        category: 'entree',
+        category: 'side',
         popularity: 8,
-        rating: 4.5,
-        tags: ['Bug free', 'Fast Delivery', 'Extra cheesy']
+        rating: 4,
+        tags: ['Bread', 'Fast Delivery', 'Extra cheesy']
     },
-    {   pizza = {
-        name: 'coders special',
-        price: 10,
-        category: 'entree',
-        popularity: 8,
-        rating: 4.5,
+    {   
+        name: 'sodas',
+        price: 4,
+        category: 'drink',
+        popularity: 6,
+        rating: 3.8,
         tags: ['Bug free', 'Fast Delivery', 'Extra cheesy']
         
     },
-    {   pizza = {
-        name: 'coders special',
-        price: 10,
-        category: 'entree',
-        popularity: 8,
+    {   
+        name: 'meat lovers',
+        price: 15,
+        category: 'special',
+        popularity: 9,
         rating: 4.5,
         tags: ['Bug free', 'Fast Delivery', 'Extra cheesy']
     
     },
-    {   pizza
-        name: 'coders special',
-        price: 10,
-        category: 'entree',
-        popularity: 8,
-        rating: 4.5,
+    {   
+        name: 'chocolate cake',
+        price: 8,
+        category: 'dessert',
+        popularity: 10,
+        rating: 5,
         tags: ['Bug free', 'Fast Delivery', 'Extra cheesy']
         
     }
@@ -157,8 +157,8 @@ const foodArr=[
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
-const filterFood = foodArr.filter(tag => tag === 'extra fee')
-console.log(filterFood.tags)
+const filterFood = foodArr.filter(food=> foodArr.tags.includes(bread))
+console.log(filterFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -200,7 +200,10 @@ console.log(filterFood.tags)
 */
 
 //CODE HERE
-
+function filterByProperty(prop, num, type){
+    const filtered = foodArr.filter(food =>type === "above"? food[prop] > num : food[prop] < num)
+    return filtered;
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -210,3 +213,4 @@ console.log(filterFood.tags)
 */
 
 //CODE HERE
+console.log(filterByProperty('popularity', 7, 'above'));

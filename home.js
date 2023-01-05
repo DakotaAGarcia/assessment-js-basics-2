@@ -62,7 +62,7 @@ function canWeDeliver(zipCode){
     }
 }
 }
-// console.log(canWeDeliver(85215))
+console.log(canWeDeliver(85215))
 
 /* 
     Problem 2 Continued
@@ -87,7 +87,7 @@ function canWeDeliverTwo(zipCodes2){
         {return ("You're in our delivery zone!")}
     else{ return "sorry, we can't deliver to that address"}
 }
-// console.log(canWeDeliverTwo(85205))
+console.log(canWeDeliverTwo(85205))
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
